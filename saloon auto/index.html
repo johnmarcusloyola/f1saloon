@@ -15,6 +15,29 @@
         </style>
     </head>
     <body>
+        <div class="products"> 
+            <div class="product"> 
+                <h2>Cappellino Ufficiale F1</h2> 
+                <p>$25</p> 
+                <button onclick="addToCart('Cappellino F1', 25)">Add to Cart</button> 
+            </div> 
+            <div class="product"> 
+                <h2>Modellino Red Bull RB19</h2> 
+                <p>$60</p> 
+                <button onclick="addToCart('Modellino RB19', 60)">Add to Cart</button> 
+            </div> 
+            <div class="product"> 
+                <h2>Poster Lewis Hamilton</h2> 
+                <p>$15</p> 
+                <button onclick="addToCart('Poster Hamilton', 15)">Add to Cart</button> 
+            </div> 
+            <div class="cart"> 
+                <h2>Shopping Cart</h2> 
+                <ul id="cart-items"></ul> 
+                <p>Total: $<span id="cart-total">0</span></p> 
+            </div> 
+        </div> 
+        <script src="script.js"></script>
         <header>
             <h1>F1 Racing Saloon</h1>
             <p>Il primo saloon dedicato agli amanti della Formula 1</p>
