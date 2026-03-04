@@ -1,0 +1,197 @@
+body { 
+    margin:0; background:black; color:white; font-family: 'Titillium Web', sans-serif; 
+}
+header { 
+    background: #e10600; text-align: center; padding: 25px 20px; margin-top: 70px; 
+}
+header h1 { 
+    margin: 0; font-size: 40px; font-weight: 600; 
+}
+header p {          /* solo in Index */
+    margin: 5px 0 0; font-size: 18px; font-weight: 300; 
+}
+.imglogo{
+    width: 50px; height: auto;
+}
+nav { 
+    position: fixed; top: 0; width: 100%; background: #111; text-align: center; padding: 18px 0; border-bottom: 2px solid #e10600; z-index: 1000; 
+}
+nav a { 
+    color: white; margin: 0 20px; text-decoration: none; font-weight: 600; font-size: 18px; transition: 0.3s; 
+}
+nav a:hover { color: #e10600; 
+}
+section { 
+    padding:40px; max-width: 900px; margin: auto; 
+}
+section h2 { 
+    text-align: center; font-size: 32px; font-weight: 600; 
+}
+section p { 
+    font-size: 18px; line-height: 1.6; 
+}
+.sectionindex{      /* solo in Index */
+    padding: 60px 20px; text-align: center;
+}
+.h2index{           /* solo in Index */
+    background-color: black; text-align: center; padding: 15px; margin-top: 40px;
+}
+.pindex{            /* solo in Index */
+    font-size: 20px; line-height: 1.6; max-width: 800px; margin: auto;
+}
+.btn-f1 {           /* solo in Index */
+    display: inline-block; padding: 14px 32px; background-color: #e10600; color: white; font-weight: 600; text-decoration: none; font-size: 18px; border: 2px solid #e10600; transition: 0.3s; letter-spacing: 1px;
+}
+.btn-f1:hover {     /* solo in Index */
+    background-color: transparent; color: #e10600;
+}
+.pchisiamo{         /* solo in Chi Siamo */
+    max-width: 800px; margin: 0 auto 20px auto; font-size: 18px; line-height: 1.6;
+}
+.h1servizi {        /* solo in Servizi */
+    margin: 0; font-size: 40px; font-weight: 600; text-align: center; display: inline;
+}
+.iscrizione{        /* solo in Servizi */
+    float:right; background-color: #111; color: white; padding: 10px 20px; border: 2px solid white; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 18px; transition: 0.3s; 
+}
+.iscrizione:hover { /* solo in Servizi */
+    background-color: white; color: #e10600; border-color: #e10600; 
+}
+.heroservizi {      /* solo in Servizi */
+    height: 90vh; background: url('tua-immagine.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; text-align: center; color: white; 
+}
+.cards {            /* solo in Servizi */
+    display: flex; gap: 20px; justify-content: center; margin-top: 40px; 
+}
+.card {             /* solo in Servizi */
+    background: #f5f5f5; padding: 20px; border-radius: 12px; width: 250px; 
+}
+.pcard{             /* solo in Servizi */
+    color: #e10600;
+}
+.h2card{            /* solo in Servizi */
+    color: #111;
+}
+.timeline {         /* solo in Servizi */
+    display: flex; justify-content: center; gap: 20px; margin-top: 40px; 
+} 
+.timeline .step {   /* solo in Servizi */
+    background: red; padding: 15px 20px; border-radius: 8px; 
+} 
+.btn-primary {      /* solo in Servizi */
+    background: #e10600; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 20px; 
+}
+.sectionservizi {   /* solo in Servizi */
+    padding: 80px 10%; text-align: center; 
+}
+section a {         /* solo in Servizi */
+    background-color: #111; color: white; padding: 10px 20px; border: 2px solid white; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 18px; transition: 0.3s; 
+}
+.liservizi{         /* solo in Servizi */
+    list-style: none;
+}
+.cardref{           /* solo in Servizi */
+    border-color:#e10600 ;background:#f5f5f5; color: white; border-radius: 20px; text-decoration: none; display: inline-block;
+}
+.hrservizi{
+    margin:40px 0; border-color:#e10600;width: 95%;margin-left: auto;margin-right: auto;
+}
+.bodyiscrizione{    /* solo in Iscrizione */
+    font-family: Arial, sans-serif; background: #e10600; margin: 0; padding: 0;color:#111; 
+} 
+.container{ 
+    max-width: 500px; margin: 40px auto; background: whitesmoke; padding: 20px 25px; border-radius: 8px; box-shadow: 0 2px 8px black; 
+}
+.h1biglietti{       /* solo in Iscrizione */
+    text-align: center; margin-bottom: 20px; font-size: 24px; 
+} 
+.form-group{        /* solo in Iscrizione */
+    margin-bottom: 15px; 
+}
+.form-group label{  /* solo in Iscrizione */
+    display: block; margin-bottom: 6px; font-weight: bold; font-size: 14px; 
+} 
+.form-group input[type="text"], .form-group input[type="email"], .form-group input[type="password"], .form-group select, .form-group textarea { /* solo in Iscrizione */
+    width: 100%; padding: 8px 10px; border: 1px solid whitesmoke; border-radius: 4px; font-size: 14px; box-sizing: border-box; 
+} 
+.form-group textarea{ /* solo in Iscrizione */
+    min-height: 80px; resize: vertical; 
+}
+.radio-group, .checkbox-group{ 
+    display: flex; align-items: center; gap: 15px; font-size: 14px; 
+}
+.radio-group label, .checkbox-group label{ /* solo in Iscrizione */
+    font-weight: normal; margin: 0; 
+} 
+.submit-btn{ /* solo in Iscrizione */
+    width: 200px; padding: 10px 0; border: none; border-radius: 4px; background: lightskyblue ; color: white; font-size: 16px; cursor: pointer; margin-top: 10px; 
+} 
+.submit-btn:hover{  /* solo in Iscrizione */
+    background: blue; 
+} 
+.note { /* solo in Iscrizione */
+    font-size: 12px; color: gray; margin-top: 5px; 
+}
+.divbtn{ /* solo in Iscrizione */
+    text-align: center;
+}
+.section-wrapper{ /* solo in Eventi */
+    display: flex; justify-content: center; gap: 40px; margin-top: 40px; 
+}
+.side-imagessinistra{ /* solo in Eventi */
+    display: flex; flex-direction: column; gap: 20px; 
+}
+.side-imagessinistra img{ 
+    width: 220px; height: auto; border-radius: 10px; border: 2px solid #e10600; box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); 
+}
+.sectioneventi{ /* solo in Eventi */
+    padding: 40px; max-width: 900px; margin: 40px auto; background: #1a1a1a; border-radius: 12px; box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); 
+}
+.side-imagesdestra{ /* solo in Eventi */
+    display: flex; flex-direction: column; gap: 20px; 
+}
+.side-imagesdestra img{ /* solo in Eventi */
+    width: 220px; height: auto; border-radius: 10px; border: 2px solid #e10600; box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); 
+}
+.h2eventi{      /* solo in Eventi */
+    text-align: center; font-size: 32px; font-weight: 600; margin-bottom: 20px; 
+}
+section ul{     /* solo in Eventi */
+    font-size: 18px; line-height: 1.7; padding-left: 20px;
+}
+section li {    /* solo in Eventi */
+    margin-bottom: 8px; 
+}
+.divcontatti{   /* solo in Contatti */
+    max-width: 900px; margin: 120px auto 40px auto; background: #1a1a1a; padding: 40px; border-radius: 12px; box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+.h2contatti {   /* solo in Contatti */
+    text-align:center; font-size:36px; margin-bottom:20px; 
+}
+.p1contatti{    /* solo in Contatti */
+    font-size:18px; text-align:center; margin-bottom:30px;
+}
+.p2contatti{    /* solo in Contatti */
+    font-size:18px; text-align:center; font-style:italic;
+}
+.p3contatti{    /* solo in Contatti */
+    font-size:18px; text-align:center; margin-top:20px;
+}
+.hrcontatti{    /* solo in Contatti */
+    margin:40px 0; border-color:#e10600;
+}
+.minidiv{       /* solo in Contatti */
+    width:45%; min-width:280px;
+}
+.divflex{       /* solo in Contatti */
+    display:flex; justify-content:space-between; flex-wrap:wrap;
+}
+.h3contatti{    /* solo in Contatti */
+    font-size:24px; margin-bottom:10px;
+}
+.pcontatti{     /* solo in Contatti */
+    font-size: 17px;
+}
+.imgcontatti{   /* solo in Contatti */
+    width: 16px;
+}
