@@ -5,7 +5,7 @@ body {
     margin: 0;
     background: #000;
     color: white;
-    font-family: 'Titilium Wleb', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 img {
@@ -1383,7 +1383,7 @@ section li {
 }
 
 /* --------------------------------------------------
-   MERCHINDISE//CARRELLO
+   MERCHANDISE//CARRELLO
 -------------------------------------------------- */
 
 .merchandiseheader {
@@ -1425,4 +1425,158 @@ button {
 
 button.remove {
     background: red;
+}
+
+/* --------------------------------------------------
+   MOBILE PORTRAIT
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+/* SECTION PADDING */
+section {
+    padding: 25px 20px;
+}
+
+/* NAVBAR */
+nav {
+    padding: 14px 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* HEADER */
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* HERO INDEX */
+.heroindex {
+    height: 60vh;
+}
+
+.heroindex-content h2 {
+    font-size: 32px;
+}
+
+.pindex {
+    font-size: 16px;
+}
+
+/* BUTTONS */
+.btn-f1 {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* SERVIZI CARDS */
+.cards {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+}
+
+/* LOUNGE SECTION */
+.lounge-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.lounge-card {
+    width: 90%;
+}
+
+/* GRID LAYOUTS */
+.servizi-grid,
+.materiali-grid,
+.comparativa-grid,
+.signature-grid,
+.motion-grid {
+    grid-template-columns: 1fr;
+}
+
+/* WINE GRID */
+.wine-grid {
+    flex-direction: column;
+    align-items: center;
+}
+
+.wine-card {
+    width: 90%;
+}
+
+/* HERO TITLES */
+.hero-servizio h1 {
+    font-size: 38px;
+}
+
+.golden-title {
+    font-size: 36px;
+}
+
+.glow-title {
+    font-size: 40px;
+}
+
+/* SHOTS GRID */
+.shots-grid {
+    grid-template-columns: 1fr;
+}
+
+/* TIMELINE */
+.timeline {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step {
+    width: 100%;
+}
+
+/* EVENTI */
+.section-wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-imagessinistra img,
+.side-imagesdestra img {
+    width: 90%;
+}
+
+/* CONTATTI */
+.divflex {
+    flex-direction: column;
+}
+
+.minidiv {
+    width: 100%;
+}
+
+/* FORM */
+.container {
+    width: 90%;
+}
+
+/* MERCH PRODUCTS */
+.product {
+    margin: 10px 0;
+}
+
+/* IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 }
