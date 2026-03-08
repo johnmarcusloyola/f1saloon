@@ -3,94 +3,180 @@
     <head>
         <meta charset="UTF-8">
         <title>Servizi - F1 Racing Saloon</title>
-        <!-- Font principale del sito -->
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="image/Logo.png">
     </head>
-    <header>
-        <a class="iscrizione" href="Iscrizione.html">Biglietti</a>
-        <h1 class="h1servizi">I Nostri Servizi</h1>
-    </header>
+    <body>
 
-    <nav>
-        <img class="imglogo" src="./image/Logo.png" >
-        <a href="index.html">Home</a>
-        <a href="I nostri servizi.html">Chi siamo</a>
-        <a href="servizi.html">Servizi</a>
-        <a href="eventi.html">Eventi</a>
-        <a href="contatti.html">Contatti</a>
-    </nav>
+        <!-- HEADER -->
+        <header>
+            <h1 class="h1servizi">I Nostri Servizi</h1>
+        </header>
 
-    <section class="heroservizi"> 
-        <div class="hero-content"> 
-            <h1>Esperienze Esclusive nel Mondo della Formula 1</h1> 
-            <p>Accesso VIP, incontri con i piloti e momenti irripetibili in pista.</p> 
-            <a href="contatti.html" class="btn-primary">Richiedi Informazioni</a> 
-        </div> 
-    </section>
+        <!-- NAVBAR -->
+        <nav>
+            <img class="imglogo" src="./image/Logo.png">
+            <a href="index.html">Home</a>
+            <a href="I nostri servizi.html">Chi siamo</a>
+            <a href="servizi.html">Servizi</a>
+            <a href="eventi.html">Eventi</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
 
-    <section class="sectionservizi" id="paddock"> 
-        <h2>Formula One Paddock Club</h2> 
-        <p>Vivi l’eccellenza assoluta della F1 con accesso al Paddock Club: hospitality di lusso, vista privilegiata sulla pit lane e servizi esclusivi.</p> 
-        <div class="cards"> 
-            <a class="cardref" href="hospitality.html">
-                <div class="card"> 
-                    <img src="image/hospitality.jpg">
-                    <h2 class="h2card">Hospitality Premium</h2> 
-                    <p class="pcard">Ambienti esclusivi, comfort e servizio dedicato.</p>
-                </div> 
-            </a>
-            <a class="cardref" href="pitlane.html">
-                <div class="card"> 
-                    <img src="image/pitlane.jpg">
-                    <h2 class="h2card">Vista Pit Lane</h2> 
-                    <p class="pcard">Osserva da vicino il lavoro dei team durante la gara.</p>
-                </div> 
-            </a>
-            <a class="cardref" href="catering.html">
-                <div class="card"> 
-                    <img src="image/catering.jpg">
-                    <h2 class="h2card">Catering di Lusso</h2> 
-                    <p class="pcard">Gastronomia di alto livello per un'esperienza completa.</p>
-                </div> 
-            </a>
-        </div>
-    </section>
-    <hr class="hrservizi">
-    <section class="sectionservizi" id="tribune"> 
-        <h2>Biglietti Tribuna Premium</h2> 
-        <p>Posti selezionati nelle migliori tribune per seguire la gara da prospettive uniche.</p>
-        <div class="tribuna-img"> 
-            <!-- Qui puoi inserire una mappa stilizzata o un'immagine --> 
-        </div> 
-    </section>
+        <!-- HERO CINEMATOGRAFICA -->
+        <section class="heroservizi hero-cinema-servizi">
+            <div class="hero-overlay-servizi"></div>
+            <div class="hero-particles-servizi"></div>
 
-    <section class="sectionservizi" id="pit"> 
-        <h2>Entra nel Cuore dell'Azione</h2> 
-        <p>Cammina sulla griglia di partenza, vivi l'adrenalina pre-gara e accedi ai box della tua squadra preferita per un'intera giornata.</p> 
-        <div class="timeline"> 
-            <div class="step">Arrivo & Accredito</div> 
-            <div class="step">Grid Walk</div> 
-            <div class="step">Pit Tour</div> 
-            <div class="step">Hospitality Team</div> 
-        </div> 
-    </section>
+            <div class="hero-content fade-in-up">
+                <h1 class="hero-title-servizi">Vivi la Formula 1 come un ospite d’onore</h1>
+                <p class="hero-subtitle-servizi">
+                    Accesso VIP, hospitality di lusso e momenti irripetibili in pista:
+                    ogni esperienza è pensata per farti sentire al centro dell’azione.
+                </p>
+                <a href="contatti.html" class="btn-primary btn-hero-servizi">Richiedi Informazioni</a>
+            </div>
+        </section>
 
-    <section class="sectionservizi" id="pilota"> 
-        <h2>Incontra il Tuo Pilota Preferito</h2> 
-        <p>Un momento esclusivo per conoscere da vicino il tuo pilota: foto, autografi e conversazione privata.</p> 
-        <div class="pilota-img"> 
-            <!-- Immagine grande o card team --> 
-        </div> 
-    </section>
+        <!-- SEPARATORE -->
+        <hr class="divider-servizi">
 
-    <section class="sectionservizi" id="perche"> 
-        <h2>Perché Scegliere Noi</h2> 
-        <ul> 
-            <li class="liservizi"><strong>Esperienze personalizzate</strong> su misura per te.</li> 
-            <li class="liservizi"><strong>Accesso garantito</strong> e verificato agli eventi ufficiali.</li> 
-            <li class="liservizi"><strong>Supporto dedicato</strong> prima e durante l’evento.</li> 
-        </ul> 
-    </section>
+        <!-- FORMULA ONE PADDOCK CLUB -->
+        <section class="sectionservizi section-dark" id="paddock">
+            <h2 class="section-title-servizi">Formula One Paddock Club</h2>
+            <p class="section-text-servizi">
+                Il cuore pulsante della Formula 1: il Paddock Club.
+                Qui la gara non si guarda: si vive tra comfort esclusivi, vista privilegiata sulla pit lane
+                e servizi dedicati ai veri appassionati.
+            </p>
+
+            <div class="cards cards-premium">
+                <a class="cardref" href="hospitality.html">
+                    <div class="card card-premium">
+                        <div class="card-image-wrapper">
+                            <img src="image/hospitality.jpg" alt="Hospitality Premium">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <h2 class="h2card">Hospitality Premium</h2>
+                        <p class="pcard">
+                            Ambienti raffinati, servizio impeccabile e comfort da prima classe.
+                        </p>
+                    </div>
+                </a>
+
+                <a class="cardref" href="pitlane.html">
+                    <div class="card card-premium">
+                        <div class="card-image-wrapper">
+                            <img src="image/pitlane.jpg" alt="Vista Pit Lane">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <h2 class="h2card">Vista Pit Lane</h2>
+                        <p class="pcard">
+                            Il punto più vicino all’azione: vivi i pit stop da protagonista.
+                        </p>
+                    </div>
+                </a>
+
+                <a class="cardref" href="catering.html">
+                    <div class="card card-premium">
+                        <div class="card-image-wrapper">
+                            <img src="image/catering.jpg" alt="Catering di Lusso">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <h2 class="h2card">Catering di Lusso</h2>
+                        <p class="pcard">
+                            Piatti gourmet e champagne selezionati per un’esperienza completa.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SEPARATORE -->
+        <hr class="divider-servizi">
+
+        <!-- BIGLIETTI TRIBUNA PREMIUM (AGGIORNATA CON BOTTONE) -->
+        <section class="sectionservizi" id="tribune">
+            <h2 class="section-title-servizi">Biglietti Tribuna Premium</h2>
+            <p class="section-text-servizi">
+                Posti selezionati nelle migliori tribune per seguire la gara da prospettive uniche.
+                Scegli la tua posizione ideale e vivi ogni sorpasso da protagonista.
+            </p>
+
+            <div class="tribuna-img">
+                <!-- Qui puoi inserire una mappa stilizzata o un'immagine -->
+            </div>
+
+            <div class="biglietti-btn-wrapper">
+                <a href="Iscrizione.html" class="btn-biglietti">Acquista i Biglietti</a>
+            </div>
+        </section>
+
+        <!-- SEPARATORE -->
+        <hr class="divider-servizi">
+
+        <!-- ENTRA NEL CUORE DELL'AZIONE – TIMELINE MODERNA -->
+        <section class="sectionservizi section-dark" id="pit">
+            <h2 class="section-title-servizi">Entra nel Cuore dell'Azione</h2>
+            <p class="section-text-servizi">
+                Cammina sulla griglia di partenza, vivi l'adrenalina pre-gara e accedi ai box della tua squadra preferita
+                per un'intera giornata. Un percorso pensato per farti respirare la Formula 1 da dentro.
+            </p>
+
+            <div class="timeline timeline-modern">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <span class="step-label">Arrivo & Accredito</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <span class="step-label">Grid Walk</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <span class="step-label">Pit Tour</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">04</span>
+                    <span class="step-label">Hospitality Team</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARATORE -->
+        <hr class="divider-servizi">
+
+        <!-- INCONTRA IL TUO PILOTA (INVARIATA) -->
+        <section class="sectionservizi" id="pilota">
+            <h2>Incontra il Tuo Pilota Preferito</h2>
+            <p>Un momento esclusivo per conoscere da vicino il tuo pilota: foto, autografi e conversazione privata.</p>
+            <div class="pilota-img">
+                <!-- Immagine grande o card team -->
+            </div>
+        </section>
+
+        <!-- SEPARATORE -->
+        <hr class="divider-servizi">
+
+        <!-- PERCHÉ SCEGLIERE NOI – PIÙ PREMIUM -->
+        <section class="sectionservizi section-dark" id="perche">
+            <h2 class="section-title-servizi">Perché Scegliere Noi</h2>
+            <ul class="list-servizi">
+                <li class="liservizi">
+                    <strong>Esperienze personalizzate</strong> costruite su misura in base alle tue esigenze e al tuo livello di esclusività.
+                </li>
+                <li class="liservizi">
+                    <strong>Accesso garantito</strong> e verificato agli eventi ufficiali, con canali dedicati e conferme chiare.
+                </li>
+                <li class="liservizi">
+                    <strong>Supporto dedicato</strong> prima e durante l’evento, per vivere ogni momento senza pensieri.
+                </li>
+                <li class="liservizi">
+                    <strong>Connessione diretta al mondo F1</strong> grazie a partnership e contatti nel paddock.
+                </li>
+            </ul>
+        </section>
+
+    </body>
 </html>

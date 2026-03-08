@@ -2,20 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Servizi - F1 Racing Saloon</title>
+        <title>Chi Siamo - F1 Racing Saloon</title>
+
         <!-- Font principale del sito -->
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="image/Logo.png">
     </head>
+
     <body>
 
+        <!-- HEADER -->
         <header>
             <h1>Il Nostro Saloon</h1>
         </header>
 
+        <!-- NAVBAR -->
         <nav>
-            <img class="imglogo"src="./image/Logo.png">
+            <img class="imglogo" src="./image/Logo.png">
             <a href="index.html">Home</a>
             <a href="I nostri servizi.html">Chi siamo</a>
             <a href="servizi.html">Servizi</a>
@@ -23,23 +27,70 @@
             <a href="contatti.html">Contatti</a>
         </nav>
 
-        <section>
-            <h2>Chi siamo</h2>
-            <p class="pchisiamo">
-                <strong>F1 Racing Saloon</strong> nasce dalla voglia di creare un punto di ritrovo per chi vive la Formula 1 con il cuore che batte a 300 all’ora.
+        <!-- NUOVA SEZIONE CHI SIAMO -->
+        <section class="chi-siamo-section">
+
+            <h2 class="chi-title glow-red">Chi siamo</h2>
+
+            <p class="chi-intro fade-on-scroll">
+                F1 Racing Saloon è il luogo dove la Formula 1 diventa esperienza.
+                Qui ogni gara è un evento, ogni sorpasso un brivido condiviso,
+                ogni tifoso parte di una community che vive i motori con passione vera.
             </p>
-    
-            <p class="pchisiamo">
-                Abbiamo creato uno spazio moderno e immersivo dove puoi guardare i Gran Premi su maxischermo, 
-                sfidare i tuoi amici ai simulatori di guida e condividere ogni sorpasso, strategia e colpo di scena 
-                con una vera community di appassionati.
+
+            <p class="chi-manifesto fade-on-scroll">
+                <strong>“Dove la passione diventa esperienza.”</strong>
             </p>
-    
-            <p class="pchisiamo">
-                Per noi la F1 non è solo uno sport da guardare la domenica. 
-                È adrenalina, competizione, tecnologia e divertimento da vivere insieme.
-            </p>
+
+            <div class="chi-grid">
+
+                <div class="chi-box fade-on-scroll">
+                    <h3>Cosa facciamo</h3>
+                    <ul>
+                        <li>Servizio hospitality esclusivo per vivere il Gran Premio in un ambiente premium.</li>
+                        <li>Vista privilegiata sulla pit lane per seguire da vicino ogni momento decisivo.</li>
+                        <li>Catering di lusso con selezione gourmet pensata per un'esperienza unica.</li>
+                    </ul>
+                </div>
+
+                <div class="chi-box fade-on-scroll">
+                    <h3>Perché esistiamo</h3>
+                    <p>
+                        Per dare agli appassionati un luogo dove vivere la F1 insieme:
+                        adrenalina, strategia, emozione e community.
+                    </p>
+                </div>
+
+                <div class="chi-box fade-on-scroll">
+                    <h3>Per chi è pensato</h3>
+                    <p>
+                        È pensato per chi desidera vivere la Formula 1 in un ambiente esclusivo,
+                        con un servizio hospitality dedicato che trasforma ogni gara in un'esperienza premium.
+                        Per chi vuole una vista privilegiata sulla pit lane e un contatto più vicino con l'azione.
+                        Per chi cerca un catering di lusso capace di accompagnare ogni momento con stile e qualità.
+                    </p>
+                </div>
+
+            </div>
+
         </section>
+
+        <!-- SCRIPT PER FADE-IN -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const faders = document.querySelectorAll('.fade-on-scroll');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                faders.forEach(el => observer.observe(el));
+            });
+        </script>
 
     </body>
 </html>
