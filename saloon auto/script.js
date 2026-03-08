@@ -24,7 +24,7 @@ const products = [
     { id: 21, nome: "Giacca Alpine", prezzo: 69.99 ,image:"alpine.png" ,prodimg:"giaccaalpine.png"},
     { id: 22, nome: "Giacca Williams", prezzo: 69.99 ,image:"williams.png" ,prodimg:"giaccawilliams.png"},
     { id: 23, nome: "Giacca Cadillac", prezzo: 69.99 ,image:"cadillac.png" ,prodimg:"giaccacadillac.png"},
-    { id: 24, nome: "Giacca Aston Martin", prezzo: 69.99 ,image:"astonmartin.png" ,prodimg:"giaccaastonmartin.png"},
+    { id: 24, nome: "Giacca Aston Martin", prezzo: 69.99 ,image:"astonmartin.png" ,prodimg:"giaccaaston     martin.png"},
 
     { id: 25, nome: "Poster Calendario F1 2026", prezzo: 59.99 ,image:"Logo.png" ,prodimg:"postercalendariof1.png"},
     { id: 26, nome: "Poster RedBull 2026", prezzo: 72.99 ,image:"redbull.png" ,prodimg:"posterredbull2026.png"},
