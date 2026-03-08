@@ -183,6 +183,88 @@ nav a:hover {
     font-size: 18px;
     line-height: 1.6;
 }
+.chi-siamo-section {
+    padding: 80px 10%;
+    max-width: 1000px;
+    margin: 120px auto 80px;
+    background: #111;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.chi-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.glow-red {
+    color: #fff;
+    text-shadow: 0 0 10px #e10600, 0 0 20px #ff1a1a;
+}
+
+.chi-intro,
+.chi-manifesto {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.chi-manifesto strong {
+    font-size: 20px;
+    color: #e10600;
+}
+
+.chi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.chi-box {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px 22px;
+    border: 1px solid rgba(225, 6, 0, 0.4);
+    transition: 0.3s;
+}
+
+.chi-box:hover {
+    border-color: #e10600;
+    box-shadow: 0 0 18px rgba(225, 6, 0, 0.7);
+    transform: translateY(-4px);
+}
+
+.chi-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.chi-box p,
+.chi-box ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.chi-box ul {
+    padding-left: 18px;
+}
+
+/* Fade-in on scroll */
+.fade-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* --------------------------------------------------
    SERVIZI - HERO + CARDS
