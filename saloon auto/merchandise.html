@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="image/Logo.png">
+</head>
+<body class="merchandisebody">
+<nav>
+        <img class="imglogo" src="./image/Logo.png">
+        <a href="index.html">Home</a>
+        <a href="I nostri servizi.html">Chi siamo</a>
+        <a href="servizi.html">Servizi</a>
+        <a href="eventi.html">Eventi</a>
+        <a href="contatti.html">Contatti</a>
+    </nav>
+<header class="merchandiseheader">
+    <h2>Merchandise</h2>
+    <div class="cart-icon" onclick="goToCart()">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+    </div>
+</header>
+<div style="display: grid; grid-template-columns:repeat(6,minmax(0,1fr)) ; gap: 2rem 1 rem;" id="productList"></div>
+<script src="script.js"></script>
+</body>
+</html>

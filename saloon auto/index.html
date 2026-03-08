@@ -7,50 +7,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="image/Logo.png">
-        <style>
-            .hero{ width: 100%; height: 200px; background-image: url('https://www.formula1.com/etc/designs/fom-website/images/f1-default-share.jpg'); background-size: cover; background-position: center; position: relative; }
-            .hero::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.55);}
-            .hero-content {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2; }
-            .hero-content h2 { font-size: 50px; margin-bottom: 20px; font-weight: 600; }
-        </style>
     </head>
     <body>
-        <div class="products"> 
-            <div class="product"> 
-                <h2>Cappellino Ufficiale F1</h2> 
-                <p>$25</p> 
-                <button onclick="addToCart('Cappellino F1', 25)">Add to Cart</button> 
-            </div> 
-            <div class="product"> 
-                <h2>Modellino Red Bull RB19</h2> 
-                <p>$60</p> 
-                <button onclick="addToCart('Modellino RB19', 60)">Add to Cart</button> 
-            </div> 
-            <div class="product"> 
-                <h2>Poster Lewis Hamilton</h2> 
-                <p>$15</p> 
-                <button onclick="addToCart('Poster Hamilton', 15)">Add to Cart</button> 
-            </div> 
-            <div class="cart"> 
-                <h2>Shopping Cart</h2> 
-                <ul id="cart-items"></ul> 
-                <p>Total: $<span id="cart-total">0</span></p> 
-            </div> 
-        </div> 
         <script src="script.js"></script>
         <header>
             <h1>F1 Racing Saloon</h1>
             <p>Il primo saloon dedicato agli amanti della Formula 1</p>
         </header>
-
-        <section class="sectionindex">
-            <h2 class="h2index">Benvenuto nel mondo della velocità</h2>
+        
+        <div class="heroindex"> 
+            <div class="heroindex-content"> 
+                <h2 class="h2index">Benvenuto nel mondo della velocità</h2>
             <p class="pindex">Il nostro saloon è il punto di ritrovo per tutti gli appassionati di Formula 1. 
             <br>Vivi ogni gara su maxi schermo con un'atmosfera unica e coinvolgente.</p>
-        </section>
-
-        <div class="hero"> 
-            <div class="hero-content"> 
                 <h2>Vivi la Formula 1 come mai prima</h2> 
                 <a href="I nostri servizi.html" class="btn-f1">Scopri di più</a> 
             </div> 

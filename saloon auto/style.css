@@ -5,7 +5,7 @@ body {
     margin: 0;
     background: #000;
     color: white;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titilium Wleb', sans-serif;
 }
 
 img {
@@ -28,6 +28,43 @@ section h2 {
 section p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+.iscrizione {
+    float: right;
+    background-color: #111;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.iscrizione:hover {
+    background-color: white;
+    color: #e10600;
+    border-color: #e10600;
+}
+.merchandise {
+    float: left;
+    background-color: white;
+    color: #111;
+    padding: 10px 20px;
+    border: 2px solid #111;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.merchandise:hover {
+    background-color: #111;
+    color: #e10600;
+    border-color: #e10600;
 }
 
 /* --------------------------------------------------
@@ -54,6 +91,10 @@ header p {
 
 .imglogo {
     width: 50px;
+}
+
+.pagina{
+    color:#e10600;
 }
 
 /* --------------------------------------------------
@@ -86,13 +127,24 @@ nav a:hover {
 /* --------------------------------------------------
    INDEX
 -------------------------------------------------- */
-.sectionindex {
-    padding: 60px 20px;
-    text-align: center;
+
+.heroindex{ 
+    background-image: url('./image/index.png'); background-size:cover;height: 80vh; background-repeat: no-repeat; background-position: center; position: relative; 
 }
 
+.heroindex::after {
+    content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.55);
+}
+
+.heroindex-content {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 2; 
+}
+
+.heroindex-content h2 { 
+    font-size: 50px; margin-bottom: 20px; font-weight: 600; 
+
+}
 .h2index {
-    background-color: black;
     padding: 15px;
     margin-top: 40px;
 }
@@ -131,178 +183,34 @@ nav a:hover {
     font-size: 18px;
     line-height: 1.6;
 }
-.chi-siamo-section {
-    padding: 80px 10%;
-    max-width: 1000px;
-    margin: 120px auto 80px;
-    background: #111;
-    border-radius: 16px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.7);
-}
-
-.chi-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 25px;
-}
-
-.glow-red {
-    color: #fff;
-    text-shadow: 0 0 10px #e10600, 0 0 20px #ff1a1a;
-}
-
-.chi-intro,
-.chi-manifesto {
-    font-size: 18px;
-    line-height: 1.7;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 20px;
-}
-
-.chi-manifesto strong {
-    font-size: 20px;
-    color: #e10600;
-}
-
-.chi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.chi-box {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 20px 22px;
-    border: 1px solid rgba(225, 6, 0, 0.4);
-    transition: 0.3s;
-}
-
-.chi-box:hover {
-    border-color: #e10600;
-    box-shadow: 0 0 18px rgba(225, 6, 0, 0.7);
-    transform: translateY(-4px);
-}
-
-.chi-box h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.chi-box p,
-.chi-box ul {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.chi-box ul {
-    padding-left: 18px;
-}
-
-/* Fade-in on scroll */
-.fade-on-scroll {
-    opacity: 0;
-    transform: translateY(18px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* --------------------------------------------------
-   SERVIZI - HERO CINEMATOGRAFICA
+   SERVIZI - HERO + CARDS
 -------------------------------------------------- */
+.h1servizi {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    display: inline;
+}
 
 .heroservizi {
-    position: relative;
-    height: 90vh;
-    background: url('image/hero-servizi.jpg') center/cover no-repeat;
+    padding: 0%;
+    background: url('image/f1vip.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
 }
-
-/* Overlay dinamico */
-.heroservizi::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(circle at 20% 80%, rgba(247,231,206,0.25), transparent 60%),
-        radial-gradient(circle at 80% 20%, rgba(225,6,0,0.35), transparent 55%),
-        linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9));
-    z-index: 1;
+.pservizi{
+    text-align: center;
 }
-
-/* Particelle */
-.heroservizi::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url('image/particles.png');
-    opacity: 0.25;
-    animation: particlesMoveServizi 22s linear infinite;
-    z-index: 2;
-}
-
-@keyframes particlesMoveServizi {
-    from { transform: translateY(0); }
-    to { transform: translateY(-220px); }
-}
-
-/* Contenuto hero */
-.hero-content {
-    position: relative;
-    z-index: 3;
-    max-width: 800px;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #fff;
-    text-shadow: 0 0 12px #e10600, 0 0 26px #ff1a1a;
-}
-
-.hero-content p {
-    font-size: 20px;
-    line-height: 1.7;
-    color: #f7f7f7;
-    margin-bottom: 25px;
-}
-
-/* Bottone hero */
-.btn-primary {
-    background: #e10600;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 700;
-    text-decoration: none;
-    border: 2px solid #e10600;
-    transition: 0.3s ease;
-    display: inline-block;
-}
-
-.btn-primary:hover {
-    background: white;
-    color: #e10600;
-    transform: scale(1.05);
-    box-shadow: 0 0 18px rgba(225,6,0,0.8);
-}
-
-/* --------------------------------------------------
-   SERVIZI - CARDS PREMIUM
--------------------------------------------------- */
 
 .cards {
     display: flex;
@@ -316,96 +224,63 @@ nav a:hover {
 }
 
 .card {
-    background: #111;
+    background: #fff;
+    padding: 25px;
     border-radius: 16px;
     width: 260px;
-    border: 1px solid rgba(212,175,55,0.6);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-    overflow: hidden;
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    border: 2px solid #e10600;
+    transition: 0.35s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     cursor: pointer;
 }
 
-/* Hover premium */
 .card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.95);
-    border-color: #ffd700;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    border-color: #111;
 }
 
-/* Immagine cinematic */
 .card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    filter: brightness(0.8) contrast(1.05);
-    transition: 0.4s ease;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
-.card:hover img {
-    filter: brightness(1) contrast(1.1);
-    transform: scale(1.05);
-}
-
-/* Overlay immagine */
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 55%);
-    pointer-events: none;
-}
-
-/* Titolo card */
 .h2card {
-    color: #f7e7ce;
+    color: #111;
     font-size: 22px;
-    margin: 15px 0 10px;
-    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* Testo card */
 .pcard {
-    color: #fff5d7;
-    font-size: 15px;
-    text-align: center;
-    padding: 0 15px 20px;
+    color: #e10600;
+    font-weight: 600;
 }
 
-/* Divider */
 .hrservizi {
     margin: 40px auto;
     border-color: #e10600;
-    width: 95%;
+    width: 96%;
 }
 
-/* Bottone biglietti */
-.biglietti-btn-wrapper {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.btn-biglietti {
-    display: inline-block;
-    padding: 14px 36px;
-    font-size: 18px;
+/* --------------------------------------------------
+   BOTTONI SPECIFICI - SERVIZI
+-------------------------------------------------- */
+.btn-primary {
+    background: #e10600;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
     font-weight: 700;
-    color: #f7e7ce;
     text-decoration: none;
-    border: 2px solid #d4af37;
-    border-radius: 40px;
-    background: linear-gradient(45deg, rgba(212,175,55,0.15), rgba(255,215,0,0.15));
-    transition: 0.35s ease;
-    box-shadow: 0 0 12px rgba(212,175,55,0.4);
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid #e10600;
+    transition: 0.3s;
 }
 
-/* Hover premium */
-.btn-biglietti:hover {
-    background: #fff5d7;
-    color: #111;
-    border-color: #ffd700;
-    transform: scale(1.06);
-    box-shadow: 0 0 18px rgba(255,215,0,0.9);
+.btn-primary:hover {
+    background: white;
+    color: #e10600;
 }
 
 /* --------------------------------------------------
@@ -1161,18 +1036,15 @@ nav a:hover {
 }
 
 .signature-card h3 {
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
+    text-align: center;
+    padding:10px;
+    margin-top: 20%;
     font-size: 22px;
     font-weight: 700;
 }
 
 .signature-card p {
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    right: 20px;
+    text-align: center;
     font-size: 14px;
     color: #f7e7ce;
 }
@@ -1475,10 +1347,7 @@ section li {
 
 .radio-group,
 .checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 14px;
+    display: inline-block;
 }
 
 .radio-group label,
@@ -1511,4 +1380,49 @@ section li {
 
 .divbtn {
     text-align: center;
+}
+
+/* --------------------------------------------------
+   MERCHINDISE//CARRELLO
+-------------------------------------------------- */
+
+.merchandiseheader {
+    background: #e10600;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-icon {
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-count {
+    background: #111;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+.product {
+    background-color: white;
+    color:#000;
+    border: 1px solid #111;
+    padding: 15px;
+    margin: 3px;
+}
+
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: white;
+}
+
+button.remove {
+    background: red;
 }
