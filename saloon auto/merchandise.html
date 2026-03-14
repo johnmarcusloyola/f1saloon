@@ -2,27 +2,112 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Ticket Store</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Merchandise Store</title>
     <link rel="icon" type="image/x-icon" href="image/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="merchandise.css">
 </head>
-<body class="merchandisebody">
+<body>
+
 <nav>
-        <img class="imglogo" src="./image/Logo.png">
-        <a href="index.html">Home</a>
-        <a href="I nostri servizi.html">Chi siamo</a>
-        <a href="servizi.html">Servizi</a>
-        <a href="eventi.html">Eventi</a>
-        <a href="contatti.html">Contatti</a>
-    </nav>
-<header class="merchandiseheader">
+    <img class="imglogo" src="image/Logo.png" alt="Logo">
+    <a href="index.html">Home</a>
+    <a href="I nostri servizi.html">Chi siamo</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="eventi.html">Eventi</a>
+    <a href="contatti.html">Contatti</a>
+</nav>
+
+<header class="store-header">
     <h2>Negozio</h2>
-    <div class="cart-icon" onclick="goToCart()">
+    <div class="cart-icon" onclick="openCart()">
         🛒 <span id="cartCount" class="cart-count">0</span>
     </div>
 </header>
-<div id="specialproductList"></div>
-<div id="productList"></div>
+
+<div class="store-banner">
+    <div class="stripe top"></div>
+    <h1>MERCHANDISE</h1>
+    <p>Abbigliamento · Poster · Esperienze Esclusive</p>
+    <div class="stripe bottom"></div>
+</div>
+
+<!-- LOUNGE -->
+<div class="section-label">
+    <h2>✦ Esperienze Premium</h2>
+    <p>Hospitality esclusiva e accesso pit lane</p>
+</div>
+
+<div class="premium-section lounge">
+    <div class="premium-header">
+        <div class="premium-icon">🥂</div>
+        <div class="premium-title-area">
+            <h2>HOSPITALITY LOUNGE</h2>
+            <p>Champagne, cibo gourmet e vista privilegiata sul circuito</p>
+        </div>
+        <span class="premium-badge">VIP EXCLUSIVE</span>
+    </div>
+    <div class="premium-cards" id="loungeCards"></div>
+</div>
+
+<!-- PIT LANE -->
+<div class="premium-section pitlane">
+    <div class="premium-header">
+        <div class="premium-icon">🏎️</div>
+        <div class="premium-title-area">
+            <h2>PIT LANE ACCESS</h2>
+            <p>Entra nel cuore della Formula 1</p>
+        </div>
+        <span class="premium-badge">SOLD OUT RISK</span>
+    </div>
+    <div class="premium-cards" id="pitlaneCards"></div>
+</div>
+
+<!-- PRODOTTI -->
+<div class="section-label" style="padding-top:80px;">
+    <h2>🛍️ Merchandise</h2>
+    <p>Cappellini, giacche e poster ufficiali</p>
+</div>
+
+<div class="cat-tabs">
+    <button class="cat-tab active" onclick="filterCat('all',this)">Tutti</button>
+    <button class="cat-tab" onclick="filterCat('cappellino',this)">🧢 Cappellini</button>
+    <button class="cat-tab" onclick="filterCat('giacca',this)">🧥 Giacche</button>
+    <button class="cat-tab" onclick="filterCat('poster',this)">🖼️ Poster</button>
+</div>
+
+<div class="products-grid" id="productList"></div>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-backdrop" onclick="closeCart()"></div>
+    <div class="cart-panel">
+        <div class="cart-panel-header">
+            <h3>Carrello</h3>
+            <button class="cart-close" onclick="closeCart()">✕</button>
+        </div>
+        <div class="cart-items-list" id="cartItems">
+            <div class="cart-empty">Il carrello è vuoto</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Totale</span>
+                <span class="cart-total-val" id="totalPrice">€ 0</span>
+            </div>
+            <button class="checkout-btn" onclick="buyProducts()">Acquista ora →</button>
+        </div>
+    </div>
+</div>
+
+<div class="notif" id="notif"></div>
+
+<footer class="store-footer">
+    © 2025 F1 Experience · Tutti i prezzi IVA inclusa · Disponibilità limitata
+</footer>
+
 <script src="script.js"></script>
+<script src="merchandise.js"></script>
 </body>
 </html>
