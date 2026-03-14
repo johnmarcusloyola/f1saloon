@@ -1493,7 +1493,13 @@ section li {
     color:#000;
     border: 1px solid #111;
     padding: 15px;
-    margin: 3px;
+}
+.specialproduct {
+    background-color: white;
+    color:#000;
+    border: 1px solid #111;
+    padding: 15px;
+    margin-bottom: 5px;
 }
 
 button {
@@ -1509,8 +1515,20 @@ button.remove {
     background: red;
 }
 
+#productList{
+    display: grid; 
+    grid-template-columns:repeat(6,minmax(0,1fr)); 
+    gap: 5px;
+    row-gap: 5px;
+}
+#specialproductList{
+    display: grid; 
+    grid-template-columns:repeat(4,minmax(0,1fr)); 
+    gap: 5px;
+    row-gap: 5px;
+}
 /* --------------------------------------------------
-   MOBILE PORTRAIT
+   PORTRAIT
 -------------------------------------------------- */
 
 @media (max-width: 768px) {

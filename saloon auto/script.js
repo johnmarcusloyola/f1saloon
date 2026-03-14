@@ -12,7 +12,7 @@ const products = [
     { id: 10, nome: "Cappellino Williams", prezzo: 24.99 ,image:"williams.png" ,prodimg:"cappellowilliams.png"},
     { id: 11, nome: "Cappellino Cadillac", prezzo: 24.99 ,image:"cadillac.png" ,prodimg:"cappellocadillac.png"},
     { id: 12, nome: "Cappellino Aston Martin", prezzo: 24.99 ,image:"astonmartin.png" ,prodimg:"cappelloastonmartin.png"},
-    
+
     { id: 13, nome: "Giacca F1", prezzo: 59.99 ,image:"Logo.png" ,prodimg:"giaccaf1.png"},
     { id: 14, nome: "Giacca Mercedes", prezzo: 69.99 ,image:"mercedes.png" ,prodimg:"giaccamercedes.png"},
     { id: 15, nome: "Giacca Ferrari", prezzo: 69.99 ,image:"ferrari.png" ,prodimg:"giaccaferrari.png"},
@@ -24,7 +24,7 @@ const products = [
     { id: 21, nome: "Giacca Alpine", prezzo: 69.99 ,image:"alpine.png" ,prodimg:"giaccaalpine.png"},
     { id: 22, nome: "Giacca Williams", prezzo: 69.99 ,image:"williams.png" ,prodimg:"giaccawilliams.png"},
     { id: 23, nome: "Giacca Cadillac", prezzo: 69.99 ,image:"cadillac.png" ,prodimg:"giaccacadillac.png"},
-    { id: 24, nome: "Giacca Aston Martin", prezzo: 69.99 ,image:"astonmartin.png" ,prodimg:"giaccaaston     martin.png"},
+    { id: 24, nome: "Giacca Aston Martin", prezzo: 69.99 ,image:"astonmartin.png" ,prodimg:"giaccaastonmartin.png"},
 
     { id: 25, nome: "Poster Calendario F1 2026", prezzo: 59.99 ,image:"Logo.png" ,prodimg:"postercalendariof1.png"},
     { id: 26, nome: "Poster RedBull 2026", prezzo: 72.99 ,image:"redbull.png" ,prodimg:"posterredbull2026.png"},
@@ -33,6 +33,13 @@ const products = [
     { id: 29, nome: "Poster Audi", prezzo: 72.99 ,image:"audi.png" ,prodimg:"posteraudi.png"},
     { id: 30, nome: "Manifesto del Gran Premio di Formula 1 di Las Vegas 2025", prezzo: 72.99 ,image:"Logo.png" ,prodimg:"posterlasvegas2025.png"},
 ];
+
+const specialproducts = [
+    { id: 31, nome: "Gold Lounge", prezzo: 1200 ,image:"Logo.png" ,prodimg:"lounge-gold.jpg"},
+    { id: 32, nome: "Elite Lounge", prezzo: 2500 ,image:"Logo.png" ,prodimg:"lounge-elite.jpg"},
+    { id: 33, nome: "Royal Lounge", prezzo: 4000 ,image:"Logo.png" ,prodimg:"lounge-royal.jpg"},
+    { id: 34, nome: "Vista Pit Lane", prezzo: 600 ,image:"Logo.png" ,prodimg:"pitlane.jpg"},
+]
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -75,13 +82,52 @@ function renderProducts() {
         productList.appendChild(div);
     });
 }
+// MOSTRA PRODOTTI SPECIALI (solo se esiste specialproductList)
+function renderSpecialProducts() {
+    const specialproductList = document.getElementById("specialproductList");
+    if (!specialproductList) return;
+
+    specialproductList.innerHTML = "";
+
+    specialproducts.forEach(specialprod => {
+        const div = document.createElement("div");
+        div.className = "specialproduct";
+        div.innerHTML = `
+            <div>
+                <img src="image/${specialprod.prodimg}" style="width:100%; object-fit:cover; aspect-ratio:3/2">
+            </div>
+            <div>
+                <img src="image/${specialprod.image}" style="width:25px">
+                <strong>${specialprod.nome}</strong><br>
+                €${specialprod.prezzo}<br><br>
+                <button onclick="addToCart(${specialprod.id})">
+                    Aggiungi al carrello
+                </button>
+            </div>
+        `;
+        specialproductList.appendChild(div);
+    });
+}
 
 // AGGIUNGI AL CARRELLO
 function addToCart(id) {
-    const product = products.find(p => p.id === id);
+    let product;
+
+    if (id <= 30) {
+        product = products.find(p => p.id === id);
+    } else {
+        product = specialproducts.find(p => p.id === id);
+    }
+
+    if (!product) {
+        alert("Errore: prodotto non trovato");
+        return;
+    }
+
     cart.push(product);
     saveCart();
     updateCartCount();
+
     alert("Prodotto aggiunto al carrello!");
 }
 
@@ -105,7 +151,7 @@ function renderCart() {
             <strong>${item.nome}</strong><br>
             €${item.prezzo}<br><br>
             <button class="remove" onclick="removeFromCart(${index})">
-                Rimuovi
+            Rimuovi
             </button>
         `;
         cartItems.appendChild(div);
@@ -150,6 +196,7 @@ function goToProducts() {
 }
 
 // INIT
+renderSpecialProducts();
 renderProducts();
 renderCart();
 updateCartCount();
