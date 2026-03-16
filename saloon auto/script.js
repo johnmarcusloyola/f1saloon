@@ -229,7 +229,7 @@ function showNotif(msg) {
     if (!el) return;
     el.textContent = msg;
     el.classList.add("show");
-    setTimeout(() => el.classList.remove("show"), 2400);
+    setTimeout(() => el.classList.remove("show"), 4000);
 }
 
 /* ═══════════════════════════════════

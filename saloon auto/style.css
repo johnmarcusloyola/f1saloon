@@ -186,7 +186,7 @@ nav a:hover {
 .chi-siamo-section {
     padding: 80px 10%;
     max-width: 1000px;
-    margin: 120px auto 80px;
+    
     background: #111;
     border-radius: 16px;
     box-shadow: 0 0 25px rgba(0,0,0,0.7);
@@ -1797,7 +1797,6 @@ nav img.imglogo {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 14px;
     transition: transform .4s ease;
 }
 .prod-card:hover .prod-img-wrap img { transform: scale(1.08); }
